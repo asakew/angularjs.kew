@@ -1,0 +1,18 @@
+		<table class="table table-responsive table-hover table-dark table-striped">
+			<thead>
+				<tr>
+					<th>num</th>
+					<th>Firstname</th>
+					<th>Lastname</th>
+					<th>Email</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="x in names | orderBy : 'uppercase'">
+					<td class="text-center">{{ $index + 1 }}</td>
+					<td>{{ x.Name }}</td>
+					<td>{{ x.Country | uppercase }}</td>
+					<td>{{ x.City | uppercase }}</td>
+				</tr>
+			</tbody>
+		</table>
