@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp" ng-controller="myCtrl">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{{head_title}}</title>
+		<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+		<script src="assets/js/angular.min.js"></script>
+	</head>
+	<body class="container my-3 bg-dark text-white">
+
+<p>Select a car:</p>
+
+<select ng-model="selectedCar" ng-options="x.model for x in cars">
+</select>
+
+<h1>You selected: {{selectedCar.model}}</h1>
+<p>Its color is: {{selectedCar.color}}</p>
+
+</div>
+
+<script>
+var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope) {
+    $scope.cars = [
+        {model : "Ford Mustang", color : "red"},
+        {model : "Fiat 500", color : "white"},
+        {model : "Volvo XC90", color : "black"}
+    ];
+});
+</script>
+
+		<script src="assets/js/bootstrap.bundle.min.js"></script>
+	</body>
+</html>
