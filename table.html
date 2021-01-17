@@ -8,25 +8,11 @@
 		<script src="assets/js/angular.min.js"></script>
 	</head>
 	<body class="container my-3 bg-dark text-white">
-		<table class="table table-responsive table-hover table-dark table-striped">
-			<thead>
-				<tr>
-					<th>num</th>
-					<th>Firstname</th>
-					<th>Lastname</th>
-					<th>Email</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr ng-repeat="x in names | orderBy : 'uppercase'">
-					<td class="text-center">{{ $index + 1 }}</td>
-					<td>{{ x.Name }}</td>
-					<td>{{ x.Country | uppercase }}</td>
-					<td>{{ x.City | uppercase }}</td>
-				</tr>
-			</tbody>
-		</table>
-	</div>
+
+	<div ng-include="'header.html'"></div>
+	
+	<div ng-include="'table-include.htm'"></div>
+
 	<script>
 	var app = angular.module('myApp', []);
 	app.controller('customersCtrl', function($scope, $http) {
@@ -34,6 +20,6 @@
 	.then(function (response) {$scope.names = response.data.records;});
 	});
 	</script>
-	<script src="assets/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
+	<!-- <div ng-include="'index.php'"></div> -->
+
+<div ng-include="'footer.html'"></div>
