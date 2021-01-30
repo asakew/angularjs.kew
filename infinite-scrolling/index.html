@@ -1,3 +1,5 @@
+<!-- https://codepen.io/akagr/pen/Koagx -->
+
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.6/angular.min.js"></script>
 <div data-ng-app="demo">
   <div data-ng-controller="MainController">
@@ -9,65 +11,65 @@
     <div data-ng-show="loading">Loading</div>
   </div>
 </div>
-<h1>INFINITE SCROLLING IN ANGULARJS</h1>
+<h1>infinite scrolling IN ANGULARJS</h1>
 
 <style>
-	li {
-	 display: block;
-	 list-style-type: none;
-	 margin-bottom: 1em;
+  li {
+   display: block;
+   list-style-type: none;
+   margin-bottom: 1em;
 }
  ul {
-	 height: 250px;
-	 background: #44e394;
-	 color: #fff;
-	 overflow: auto;
-	 width: 550px;
-	 border-radius: 5px;
-	 margin: 0 auto;
-	 padding: 0.5em;
-	 border: 1px dashed #11bd6d;
+   height: 250px;
+   background: #44e394;
+   color: #fff;
+   overflow: auto;
+   width: 550px;
+   border-radius: 5px;
+   margin: 0 auto;
+   padding: 0.5em;
+   border: 1px dashed #11bd6d;
 }
  ul::-webkit-scrollbar {
-	 width: 8px;
-	 background-color: transparent;
+   width: 8px;
+   background-color: transparent;
 }
  ul::-webkit-scrollbar-thumb {
-	 background-color: #b0fccd;
-	 border-radius: 10px;
+   background-color: #b0fccd;
+   border-radius: 10px;
 }
  ul::-moz-scrollbar {
-	 width: 8px;
-	 background-color: transparent;
+   width: 8px;
+   background-color: transparent;
 }
  ul::-moz-scrollbar-thumb {
-	 background-color: #b0fccd;
-	 border-radius: 10px;
+   background-color: #b0fccd;
+   border-radius: 10px;
 }
  ul::-ms-scrollbar {
-	 width: 8px;
-	 background-color: transparent;
+   width: 8px;
+   background-color: transparent;
 }
  ul::-ms-scrollbar-thumb {
-	 background-color: #b0fccd;
-	 border-radius: 10px;
+   background-color: #b0fccd;
+   border-radius: 10px;
 }
  body {
-	 text-align: center;
-	 font-size: 1.2em;
-	 font-family: "Helvetica";
-	 color: #44e394;
-	 background: url(data:image/png;
-	base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAG0lEQVQIW2P88OHDfwY0wAgSFBAQYEQWp1AQAKUbE9XRpv7GAAAAAElFTkSuQmCC) repeat;
-	 padding: 2em;
+   text-align: center;
+   font-size: 1.2em;
+   font-family: "Helvetica";
+   color: #44e394;
+   background: url(data:image/png;
+  base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAG0lEQVQIW2P88OHDfwY0wAgSFBAQYEQWp1AQAKUbE9XRpv7GAAAAAElFTkSuQmCC) repeat;
+   padding: 2em;
 }
  
 </style>
 
 
 <script>
-	
-	app = angular.module("demo", []);
+  
+  app = angular.module("demo", []);
 
 app.controller("MainController", function($scope, $http){
   
